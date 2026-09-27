@@ -1,0 +1,65 @@
+import numpy as np
+import sys
+import scipy
+import json
+import os
+    
+np.random.seed(0)
+if len(sys.argv) == 1:
+   print(f"%s ni nj alpha p" %(sys.argv[0]))
+   print("ni : number of clients")
+   print("nj : number of plants")
+   print("p : maximum number of facilities to install or change")
+   print("alpha :  factor to adjust distance [0.6 and 0.8]")
+   
+   #sys.exit()
+   
+# number of clients
+ni = int(140)
+# number of plants
+nj = int(70)
+# alpha parameter used adjust the decline of the utility
+alpha = float(0.5)
+# number of facilities to install 
+p = int(5)
+
+# clients' cartesian coordinates
+cxyi = np.random.randint(1,1000, (ni,2))
+# plants' cartesian coordinates
+cxyj = np.random.randint(1,1000, (nj,2))
+# clients' demand
+d = np.random.randint(1,100, (ni,1))
+
+# client-plant Euclidean distances
+dist = scipy.spatial.distance.cdist(cxyi,cxyj)/100
+# plants' utility for each client
+utility = - dist * alpha
+
+# clients' willingness to patronize plants
+theta = np.exp(utility)
+# step-wise function to represent the percetion of plants' service level
+s = np.where (dist <= 1,1,np.where(dist <= 2,0.5,np.where(dist<=3,0.2,0)))
+# demand weighted attractiviness 
+a = np.multiply(np.multiply(d,s),theta)
+b = np.multiply(d,theta)
+
+# json data
+file_name = f'ni-%d-nj-%d-p-%d-alpha-%.1f.json' % (ni,nj,p,alpha)
+data = {
+    'name' : file_name,
+    'ni' : ni,
+    'nj' : nj,
+    'p'  : p,
+    'b' : b.tolist(),
+    'a' : a.tolist(),
+    'cxyi' : cxyi.tolist(),
+    'cxyj' : cxyj.tolist()
+}
+
+path = os.path.dirname(__file__)
+
+file = f'%s/%s' % (path,file_name)
+
+with open(file, 'w') as f:
+    json.dump(data, f, indent=1)
+print(f"file %s generated..." % (file))

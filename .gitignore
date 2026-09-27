@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Arquivos temporários de escritório (locks do Excel/Word)
+~$*
+*.tmp
+
+# Sistema operacional
+Thumbs.db
+.DS_Store
+desktop.ini
