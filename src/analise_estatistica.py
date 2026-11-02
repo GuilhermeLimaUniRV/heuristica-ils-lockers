@@ -21,8 +21,9 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-PASTA = os.path.dirname(os.path.abspath(__file__))
-XLSX = os.path.join(PASTA, "resultados_experimentos.xlsx")
+RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # raiz do repositório
+RES = os.path.join(RAIZ, "resultados")
+XLSX = os.path.join(RES, "resultados_experimentos.xlsx")
 ALPHA = 0.05
 
 METRICAS = [

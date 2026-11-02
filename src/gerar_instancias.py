@@ -4,7 +4,7 @@
 Gerador de instâncias para o problema de localização de lockers
 com função objetivo de soma de frações.
 
-Baseado no gerador original do orientador (gerador.txt): o modelo de
+Baseado no gerador original do orientador: o modelo de
 atratividade (utilidade, theta, nível de serviço, a e b) é mantido idêntico.
 A única diferença é que aqui ele é parametrizado e executado em lote para
 produzir todas as instâncias do experimento de uma só vez.
@@ -15,7 +15,7 @@ Grade experimental (3 x 4 x 2 = 24 instâncias):
     p  (lockers)       : 2, 4, 8, 11
     alpha (decaimento) : 0.6, 0.9
 
-Saída: arquivos JSON em ./instancias/, no formato lido por guilherme.py e milp.py.
+Saída: arquivos JSON em dados/instancias/, no formato lido por guilherme.py e milp.py.
 """
 
 import json
@@ -33,7 +33,7 @@ P_VALUES = [2, 4, 8, 11]         # número de lockers a instalar
 ALPHA_VALUES = [0.6, 0.9]        # fator de decaimento da utilidade com a distância
 SEED = 0                         # semente para reprodutibilidade da geração
 
-OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "instancias")
+OUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "dados", "instancias")
 
 
 def gerar_uma_instancia(ni, nj, p, alpha):

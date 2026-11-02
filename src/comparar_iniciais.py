@@ -22,9 +22,10 @@ import pandas as pd
 import guilherme as m
 
 
-PASTA = os.path.dirname(os.path.abspath(__file__))
-INST_DIR = os.path.join(PASTA, "instancias")
-OUT_XLSX = os.path.join(PASTA, "solucoes_iniciais.xlsx")
+RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # raiz do repositório
+RES = os.path.join(RAIZ, "resultados")
+INST_DIR = os.path.join(RAIZ, "dados", "instancias")
+OUT_XLSX = os.path.join(RES, "solucoes_iniciais.xlsx")
 
 # 3 sementes de GRASP por instância
 SEMENTES_GRASP = [975, 2617, 4116]

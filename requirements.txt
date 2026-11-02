@@ -1,4 +1,9 @@
-numpy
-scipy
-pandas
-openpyxl
+# Dependências com versões fixas, para um ambiente reprodutível (Python 3.10).
+# numpy/scipy geram as instâncias e fazem a análise; pandas tabula; PuLP resolve o
+# MILP (traz o solver CBC); matplotlib gera as figuras.
+numpy==2.2.6
+scipy==1.13.1
+pandas==2.2.3
+openpyxl==3.1.5
+PuLP==2.9.0
+matplotlib==3.9.2

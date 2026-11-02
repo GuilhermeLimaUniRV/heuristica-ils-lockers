@@ -1,9 +1,75 @@
 [RODANDO] ni-50-nj-25-p-2-alpha-0.6.json ...
-   status=Optimal | Z_MILP=13.214482142228714 | t=11.8s | provou=True | Z_ILS=13.2145 | bate_Z=True | mesmos_locais=True
+   status=Optimal | Z_MILP=13.214482142228714 | t=6.5s | provou=True | Z_ILS=13.2145 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 1 instancia(s) em milp_vs_ils.xlsx]
 [RODANDO] ni-50-nj-25-p-2-alpha-0.9.json ...
-   status=Optimal | Z_MILP=13.155504124694612 | t=6.7s | provou=True | Z_ILS=13.1555 | bate_Z=True | mesmos_locais=True
+   status=Optimal | Z_MILP=13.155504124694612 | t=5.5s | provou=True | Z_ILS=13.1555 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 2 instancia(s) em milp_vs_ils.xlsx]
 [RODANDO] ni-50-nj-25-p-4-alpha-0.6.json ...
-   status=Optimal | Z_MILP=17.59008222716205 | t=69.5s | provou=True | Z_ILS=17.5901 | bate_Z=True | mesmos_locais=True
+   status=Optimal | Z_MILP=17.59008222716205 | t=43.9s | provou=True | Z_ILS=17.5901 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 3 instancia(s) em milp_vs_ils.xlsx]
 [RODANDO] ni-50-nj-25-p-4-alpha-0.9.json ...
-   status=Optimal | Z_MILP=21.218401399634136 | t=20.4s | provou=True | Z_ILS=21.2184 | bate_Z=True | mesmos_locais=True
+   status=Optimal | Z_MILP=21.218401399634136 | t=15.3s | provou=True | Z_ILS=21.2184 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 4 instancia(s) em milp_vs_ils.xlsx]
 [RODANDO] ni-50-nj-25-p-8-alpha-0.6.json ...
+   status=Optimal | Z_MILP=18.816495683777188 | t=217.4s | provou=True | Z_ILS=18.8165 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 5 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-50-nj-25-p-8-alpha-0.9.json ...
+   status=Optimal | Z_MILP=24.211664648430578 | t=79.5s | provou=True | Z_ILS=24.2117 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 6 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-50-nj-25-p-11-alpha-0.6.json ...
+   status=Optimal | Z_MILP=19.940474509091636 | t=804.2s | provou=True | Z_ILS=19.9405 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 7 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-50-nj-25-p-11-alpha-0.9.json ...
+   status=Optimal | Z_MILP=23.392242316129792 | t=169.2s | provou=True | Z_ILS=23.3922 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 8 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-90-nj-45-p-2-alpha-0.6.json ...
+   status=Optimal | Z_MILP=22.489512621183604 | t=70.4s | provou=True | Z_ILS=22.4895 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 9 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-90-nj-45-p-2-alpha-0.9.json ...
+   status=Optimal | Z_MILP=24.963336709120014 | t=48.3s | provou=True | Z_ILS=24.9633 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 10 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-90-nj-45-p-4-alpha-0.6.json ...
+   status=Optimal | Z_MILP=33.3352606922619 | t=400.1s | provou=True | Z_ILS=33.3353 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 11 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-90-nj-45-p-4-alpha-0.9.json ...
+   status=Optimal | Z_MILP=33.7992937867341 | t=261.0s | provou=True | Z_ILS=33.7993 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 12 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-90-nj-45-p-8-alpha-0.6.json ...
+   status=Optimal | Z_MILP=35.88591321091732 | t=3866.3s | provou=False | Z_ILS=35.8859 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 13 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-90-nj-45-p-8-alpha-0.9.json ...
+   status=Optimal | Z_MILP=47.00463464039458 | t=2742.2s | provou=True | Z_ILS=47.0046 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 14 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-90-nj-45-p-11-alpha-0.6.json ...
+   status=Optimal | Z_MILP=35.672784951171955 | t=3600.6s | provou=False | Z_ILS=35.6728 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 15 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-90-nj-45-p-11-alpha-0.9.json ...
+   status=Optimal | Z_MILP=46.696252488906644 | t=3600.6s | provou=False | Z_ILS=46.6963 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 16 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-180-nj-90-p-2-alpha-0.6.json ...
+   status=Optimal | Z_MILP=38.262557973436955 | t=234.1s | provou=True | Z_ILS=38.2626 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 17 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-180-nj-90-p-2-alpha-0.9.json ...
+   status=Optimal | Z_MILP=46.14040924972491 | t=173.2s | provou=True | Z_ILS=46.1404 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 18 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-180-nj-90-p-4-alpha-0.6.json ...
+   status=Optimal | Z_MILP=57.09036719685046 | t=3593.5s | provou=False | Z_ILS=57.0904 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 19 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-180-nj-90-p-4-alpha-0.9.json ...
+   status=Optimal | Z_MILP=69.22176059711504 | t=2323.8s | provou=True | Z_ILS=69.2218 | bate_Z=True | mesmos_locais=True
+   [parcial salvo: 20 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-180-nj-90-p-8-alpha-0.6.json ...
+   status=Optimal | Z_MILP=69.33853271598034 | t=3604.3s | provou=False | Z_ILS=70.7693 | bate_Z=False | mesmos_locais=False
+   [parcial salvo: 21 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-180-nj-90-p-8-alpha-0.9.json ...
+   status=Optimal | Z_MILP=85.45223614537656 | t=3590.2s | provou=False | Z_ILS=89.1289 | bate_Z=False | mesmos_locais=False
+   [parcial salvo: 22 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-180-nj-90-p-11-alpha-0.6.json ...
+   status=Optimal | Z_MILP=73.47010507027018 | t=3597.8s | provou=False | Z_ILS=74.1668 | bate_Z=False | mesmos_locais=False
+   [parcial salvo: 23 instancia(s) em milp_vs_ils.xlsx]
+[RODANDO] ni-180-nj-90-p-11-alpha-0.9.json ...
+   status=Optimal | Z_MILP=91.7715391400797 | t=3601.8s | provou=False | Z_ILS=92.3945 | bate_Z=False | mesmos_locais=False
+   [parcial salvo: 24 instancia(s) em milp_vs_ils.xlsx]
+   [parcial salvo: 24 instancia(s) em milp_vs_ils.xlsx]
+
+Concluído. Resultados em: C:\Users\Guilherme\OneDrive\Área de Trabalho\TFC\Codigo\milp_vs_ils.xlsx

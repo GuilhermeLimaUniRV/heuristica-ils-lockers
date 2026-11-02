@@ -1,0 +1,50 @@
+[
+ {
+  "instancia": "ni-50-nj-25-p-2-alpha-0.6.json",
+  "semente": 975,
+  "Zini_Guloso": 6.9243,
+  "Zfin_Guloso": 13.2145,
+  "Zini_GRASP": 8.0172,
+  "Zfin_GRASP": 13.2145
+ },
+ {
+  "instancia": "ni-50-nj-25-p-2-alpha-0.6.json",
+  "semente": 2617,
+  "Zini_Guloso": 6.9243,
+  "Zfin_Guloso": 13.2145,
+  "Zini_GRASP": 9.5833,
+  "Zfin_GRASP": 13.2145
+ },
+ {
+  "instancia": "ni-90-nj-45-p-4-alpha-0.9.json",
+  "semente": 975,
+  "Zini_Guloso": 17.8984,
+  "Zfin_Guloso": 33.7993,
+  "Zini_GRASP": 22.603,
+  "Zfin_GRASP": 33.7993
+ },
+ {
+  "instancia": "ni-90-nj-45-p-4-alpha-0.9.json",
+  "semente": 2617,
+  "Zini_Guloso": 17.8984,
+  "Zfin_Guloso": 33.7993,
+  "Zini_GRASP": 33.0492,
+  "Zfin_GRASP": 33.7993
+ },
+ {
+  "instancia": "ni-180-nj-90-p-2-alpha-0.6.json",
+  "semente": 975,
+  "Zini_Guloso": 31.829,
+  "Zfin_Guloso": 38.2626,
+  "Zini_GRASP": 19.6464,
+  "Zfin_GRASP": 38.2626
+ },
+ {
+  "instancia": "ni-180-nj-90-p-2-alpha-0.6.json",
+  "semente": 2617,
+  "Zini_Guloso": 31.829,
+  "Zfin_Guloso": 38.2626,
+  "Zini_GRASP": 16.4251,
+  "Zfin_GRASP": 38.2626
+ }
+]

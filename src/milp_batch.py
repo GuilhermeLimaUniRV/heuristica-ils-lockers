@@ -32,14 +32,31 @@ import guilherme as ils_mod
 from milp import load_instance, compute_y_bounds, objective_value
 
 
-PASTA = os.path.dirname(os.path.abspath(__file__))
-INST_DIR = os.path.join(PASTA, "instancias")
-ILS_XLSX = os.path.join(PASTA, "resultados_experimentos.xlsx")
-OUT_XLSX = os.path.join(PASTA, "milp_vs_ils.xlsx")
+RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # raiz do repositório
+RES = os.path.join(RAIZ, "resultados")
+INST_DIR = os.path.join(RAIZ, "dados", "instancias")
+ILS_XLSX = os.path.join(RES, "resultados_experimentos.xlsx")
+OUT_XLSX = os.path.join(RES, "milp_vs_ils.xlsx")
 
-TIME_LIMIT = 1800     # 30 min por instância (professor: testar 30 ou 60 min)
+TIME_LIMIT = 3600     # 1 hora por instância (professor: testar 30 ou 60 min)
 MIP_GAP = 1e-6
 SEED_ILS = 975        # semente da execução representativa do ILS
+CENSURA = False       # False = roda TODAS as 24 instancias (sem pular as maiores)
+
+
+def _salvar(linhas):
+    """Grava o Excel de resultados; se o arquivo estiver aberto (travado),
+    salva numa copia e continua, para nao derrubar um run longo."""
+    try:
+        pd.DataFrame(linhas).to_excel(OUT_XLSX, sheet_name="MILP_vs_ILS", index=False)
+        print(f"   [parcial salvo: {len(linhas)} instancia(s) em {os.path.basename(OUT_XLSX)}]", flush=True)
+    except PermissionError:
+        alt = OUT_XLSX.replace(".xlsx", "_parcial.xlsx")
+        try:
+            pd.DataFrame(linhas).to_excel(alt, sheet_name="MILP_vs_ILS", index=False)
+            print(f"   [AVISO: {os.path.basename(OUT_XLSX)} em uso; salvei em {os.path.basename(alt)}]", flush=True)
+        except Exception as e:
+            print(f"   [AVISO: nao consegui salvar parcial agora: {e}]", flush=True)
 
 
 def alpha_do_nome(nome):
@@ -138,11 +155,15 @@ def main():
                        "Locais_ILS": " ".join(map(str, locais_ils)),
                        "Bate_Z": bate_z, "Mesmos_locais": mesmos, "Provou_otimo": provou})
 
-        if not provou:
+        # salvamento incremental: grava o Excel a cada instancia concluida,
+        # para nao perder o progresso se o processo for interrompido.
+        _salvar(linhas)
+
+        if not provou and CENSURA:
             print(f"   >>> Tempo limite atingido sem ótimo. Censurando as maiores a partir daqui.")
             censurar = True
 
-    pd.DataFrame(linhas).to_excel(OUT_XLSX, sheet_name="MILP_vs_ILS", index=False)
+    _salvar(linhas)
     print(f"\nConcluído. Resultados em: {OUT_XLSX}")
 
 

@@ -1,0 +1,10 @@
+# Mantém a imagem enxuta e evita embutir resultados antigos (serão regerados):
+__pycache__/
+*.pyc
+logs/
+figuras/
+dados/instancias_calibracao/
+resultados/
+*.pdf
+*.docx
+.git/

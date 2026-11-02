@@ -39,8 +39,9 @@ import guilherme as ils_mod  # reutiliza o código do orientador, sem modificá-
 _SEED_RNG = random.Random(2026)
 SEEDS = _SEED_RNG.sample(range(0, 5001), 30)
 VARIANTES = ["ILS-Guloso", "ILS-GRASP"]
-INST_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "instancias")
-OUT_XLSX = os.path.join(os.path.dirname(os.path.abspath(__file__)), "resultados_experimentos.xlsx")
+RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # raiz do repositório
+INST_DIR = os.path.join(RAIZ, "dados", "instancias")
+OUT_XLSX = os.path.join(RAIZ, "resultados", "resultados_experimentos.xlsx")
 
 # limite de tempo por execução, conforme a metodologia (1 hora de CPU).
 # Aplicado apenas em sistemas POSIX (Linux/Docker), via signal.
